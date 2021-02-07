@@ -1,8 +1,6 @@
 <template lang="pug">
-div.SiteIndex
-  IndexTop
-  IndexNews
-  IndexMember
+section.IndexNews#news
+  h2 IndexNews
 </template>
 
 <script lang="ts">
@@ -11,7 +9,4 @@ import { defineComponent } from "@nuxtjs/composition-api"
 export default defineComponent({})
 </script>
 
-<style lang="stylus">
-.SiteIndex
-  min-height: 100vh
-</style>
+<style lang="stylus"></style>

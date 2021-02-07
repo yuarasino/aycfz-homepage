@@ -1,6 +1,8 @@
 <template lang="pug">
 div.SiteLayout
-  nuxt
+  SiteHeader
+  SiteMain
+  SiteFooter
 </template>
 
 <script lang="ts">
