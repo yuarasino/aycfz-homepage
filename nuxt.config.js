@@ -16,13 +16,21 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
-  css: [],
+  css: [
+    "modern-css-reset/dist/reset.min.css",
+    "yakuhanjp/dist/css/yakuhanjp-noto.min.css",
+    "@/assets/styles/global.styl",
+  ],
 
   plugins: [],
 
   components: true,
 
-  buildModules: ["@nuxt/typescript-build", "@nuxtjs/composition-api"],
+  buildModules: [
+    "@nuxt/typescript-build",
+    "@nuxtjs/composition-api",
+    "@nuxtjs/style-resources",
+  ],
 
   modules: [],
 
@@ -38,4 +46,8 @@ export default {
   generate: {
     interval: 1000,
   },
+
+  styleResources: {
+    stylus: ["@/assets/styles/import.styl"]
+  }
 }
