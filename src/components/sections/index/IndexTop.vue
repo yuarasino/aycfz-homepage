@@ -1,6 +1,6 @@
 <template lang="pug">
 section.IndexTop#top
-  h1 aycfz-homepage
+  ImageWrapper(:src="'/images/top.png'" :alt="''" :raito="9/16")
 </template>
 
 <script lang="ts">
