@@ -22,7 +22,7 @@ export default {
 
   components: true,
 
-  buildModules: ["@nuxt/typescript-build"],
+  buildModules: ["@nuxt/typescript-build", "@nuxtjs/composition-api"],
 
   modules: [],
 
@@ -33,5 +33,9 @@ export default {
       aggregateTimeout: 300,
       poll: 1000,
     },
+  },
+
+  generate: {
+    interval: 1000,
   },
 }
