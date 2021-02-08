@@ -1,16 +1,25 @@
 <template lang="pug">
 header.SiteHeader(:class="isScrollOver ? 'scroll-over' : ''")
-  h1.logo-wrapper
-    NuxtLink.logo(to="/" data-content="/えーゆーちごふれずも") AYCFZ
+  div.logo-wrapper
+    NuxtLink.logo-link(to="/")
+      h1.logo
+        span.en AYCFZ
+        span.jp /えーゆーちごふれずも
   div.flex-spacer
   nav.menu-wrapper
-    ul.ul
-      li.li
-        NuxtLink.menu(to="/#top") TOP
-      li.li
-        NuxtLink.menu(to="/#news") NEWS
-      li.li
-        NuxtLink.menu(to="/#member") MEMBER
+    ul.menu-list
+      li.menu-item
+        NuxtLink.menu-link(to="/#top")
+          div.menu
+            span.en TOP
+      li.menu-item
+        NuxtLink.menu-link(to="/#news")
+          div.menu
+            span.en NEWS
+      li.menu-item
+        NuxtLink.menu-link(to="/#member")
+          div.menu
+            span.en MEMBER
 </template>
 
 <script lang="ts">
@@ -52,19 +61,22 @@ export default defineComponent({
 .logo-wrapper
   margin-left: 1rem
 
-.logo
+.logo-link
   display: block
-  padding: 0 .25em
   text-decoration: none
-  font-family: $designFontFamily
-  font-size: 2rem
-  font-weight: 700
   color: inherit
 
-  &::after
-    content: attr(data-content)
-    margin-left: .125em
-    font-family: $textFontFamily
+.logo
+  padding: 0 .25em
+  font-size: 2rem
+  font-weight: 700
+
+  .en
+    font-family: $enFontFamily
+
+  .jp
+    margin-left: .1875em
+    font-family: $jpFontFamily
     font-size: 1rem
 
 .flex-spacer
@@ -73,22 +85,26 @@ export default defineComponent({
 .menu-wrapper
   margin-right: 1.5rem
 
-.ul
+.menu-list
   list-style: none
   display: flex
   justify-content: center
   align-items: center
   padding-left: 0
 
-.li
+.menu-item
   margin-left: 1rem
 
-.menu
+.menu-link
   display: block
-  padding: 0 .25em
   text-decoration: none
-  font-family: $designFontFamily
+  color: inherit
+
+.menu
+  padding: 0 .25em
   font-size: 1rem
   font-weight: 700
-  color: inherit
+
+  .en
+    font-family: $enFontFamily
 </style>

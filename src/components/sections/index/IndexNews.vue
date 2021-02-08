@@ -1,6 +1,6 @@
 <template lang="pug">
 section.IndexNews#news
-  h2 IndexNews
+  h2.title-wrapper 
 </template>
 
 <script lang="ts">

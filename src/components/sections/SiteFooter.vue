@@ -1,7 +1,8 @@
 <template lang="pug">
 footer.SiteFooter
-  p.copyright-wrapper
-    span.copyright &copy; AYCFZ
+  div.copyright-wrapper
+    p.copyright
+      span.en &copy; AYCFZ
 </template>
 
 <script lang="ts">
@@ -21,4 +22,8 @@ export default defineComponent({})
 
 .copyright
   font-size: (14rem / 16)
+  font-weight: 700
+
+  .en
+    font-family: $enFontFamily
 </style>
