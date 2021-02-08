@@ -1,7 +1,7 @@
 <template lang="pug">
 header.SiteHeader
   h1.logo-wrapper
-    NuxtLink.logo(to="/") AYCFZ
+    NuxtLink.logo(to="/" data-content="/えーゆーちごふれずも") AYCFZ
   div.flex-spacer
   nav.menu-wrapper
     ul.ul
@@ -41,6 +41,12 @@ export default defineComponent({})
   font-size: 2rem
   font-weight: 700
   color: inherit
+
+  &::after
+    content: attr(data-content)
+    margin-left: .125em
+    font-family: $textFontFamily
+    font-size: 1rem
 
 .flex-spacer
   flex: 1
