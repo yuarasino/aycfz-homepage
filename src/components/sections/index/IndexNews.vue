@@ -1,6 +1,12 @@
 <template lang="pug">
 section.IndexNews#news
-  h2 IndexNews
+  div.title-wrapper
+    h2 IndexNews
+  ContentWrapper
+    ul.content-list
+      li.content-item
+        NuxtLink.content-link(to="/")
+          article.content
 </template>
 
 <script lang="ts">

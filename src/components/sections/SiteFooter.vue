@@ -13,9 +13,7 @@ export default defineComponent({})
 
 <style lang="stylus" scoped>
 .SiteFooter
-  display: flex
-  justify-content: center
-  align-items: center
+  flexCenter()
   width: 100%
   height: 4rem
   background-color: #333

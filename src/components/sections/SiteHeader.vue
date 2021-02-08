@@ -44,9 +44,7 @@ export default defineComponent({
 
 <style lang="stylus" scoped>
 .SiteHeader
-  display: flex
-  justify-content: center
-  align-items: center
+  flexCenter()
   position: fixed
   top: 0
   left: 0
@@ -60,11 +58,6 @@ export default defineComponent({
 
 .logo-wrapper
   margin-left: 1rem
-
-.logo-link
-  display: block
-  text-decoration: none
-  color: inherit
 
 .logo
   padding: 0 .25em
@@ -86,19 +79,10 @@ export default defineComponent({
   margin-right: 1.5rem
 
 .menu-list
-  list-style: none
-  display: flex
-  justify-content: center
-  align-items: center
-  padding-left: 0
+  flexCenter()
 
 .menu-item
   margin-left: 1rem
-
-.menu-link
-  display: block
-  text-decoration: none
-  color: inherit
 
 .menu
   padding: 0 .25em
