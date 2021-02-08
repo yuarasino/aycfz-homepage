@@ -9,4 +9,8 @@ import { defineComponent } from "@nuxtjs/composition-api"
 export default defineComponent({})
 </script>
 
-<style lang="stylus"></style>
+<style lang="stylus">
+.IndexNews
+  width: 100%
+  min-height: 100vh
+</style>

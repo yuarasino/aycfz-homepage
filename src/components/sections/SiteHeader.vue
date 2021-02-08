@@ -1,12 +1,12 @@
 <template lang="pug">
-header.SiteHeader
+header.SiteHeader(:class="isScrollOver ? 'scroll-over' : ''")
   h1.logo-wrapper
     NuxtLink.logo(to="/" data-content="/えーゆーちごふれずも") AYCFZ
   div.flex-spacer
   nav.menu-wrapper
     ul.ul
       li.li
-        NuxtLink.menu(to="/") TOP
+        NuxtLink.menu(to="/#top") TOP
       li.li
         NuxtLink.menu(to="/#news") NEWS
       li.li
@@ -14,9 +14,23 @@ header.SiteHeader
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api"
+import { defineComponent, onMounted, ref } from "@nuxtjs/composition-api"
+import { throttle } from "throttle-debounce"
 
-export default defineComponent({})
+export default defineComponent({
+  setup: () => {
+    const isScrollOver = ref(false)
+
+    onMounted(() => {
+      window.addEventListener("scroll", throttle(500, false, () => {
+        const y = Math.floor(document.body.clientWidth * 9 / 16)
+        isScrollOver.value = window.scrollY >= y
+      }))
+    })
+
+    return { isScrollOver }
+  }
+})
 </script>
 
 <style lang="stylus" scoped>
@@ -29,6 +43,11 @@ export default defineComponent({})
   left: 0
   width: 100%
   height: 4rem
+  transition: 1s
+
+  &.scroll-over
+    background-color: #333
+    color: #fff
 
 .logo-wrapper
   margin-left: 1rem

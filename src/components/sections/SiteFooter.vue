@@ -16,6 +16,8 @@ export default defineComponent({})
   justify-content: center
   align-items: center
   height: 4rem
+  background-color: #333
+  color: #fff
 
 .copyright
   font-size: (14rem / 16)
