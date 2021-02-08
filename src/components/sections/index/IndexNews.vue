@@ -1,6 +1,6 @@
 <template lang="pug">
 section.IndexNews#news
-  h2.title-wrapper 
+  h2 IndexNews
 </template>
 
 <script lang="ts">
@@ -9,7 +9,7 @@ import { defineComponent } from "@nuxtjs/composition-api"
 export default defineComponent({})
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .IndexNews
   width: 100%
   min-height: 100vh

@@ -9,4 +9,7 @@ import { defineComponent } from "@nuxtjs/composition-api"
 export default defineComponent({})
 </script>
 
-<style lang="stylus"></style>
+<style lang="stylus" scoped>
+.SiteMain
+  width: 100%
+</style>

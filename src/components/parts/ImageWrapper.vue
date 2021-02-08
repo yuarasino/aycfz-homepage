@@ -1,6 +1,6 @@
 <template lang="pug">
-div.ImageWrapper(:style="{ paddingBottom: `${raito*100}%` }")
-  img.image(:src="src" :alt="alt")
+div.ImageWrapper(:style="{ paddingBottom: `${aspectRaito*100}%` }")
+  slot
 </template>
 
 <script lang="ts">
@@ -8,9 +8,7 @@ import { defineComponent } from "@nuxtjs/composition-api"
 
 export default defineComponent({
   props: {
-    src: { type: String, required: true },
-    alt: { type: String, required: true },
-    raito: { type: Number, required: true },
+    aspectRaito: { type: Number, required: true },
   }
 })
 </script>

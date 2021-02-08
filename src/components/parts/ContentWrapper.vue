@@ -1,8 +1,6 @@
 <template lang="pug">
-div.SiteIndex
-  IndexTop
-  IndexNews
-  IndexMember
+div.ContentWrapper
+  slot
 </template>
 
 <script lang="ts">
@@ -12,6 +10,7 @@ export default defineComponent({})
 </script>
 
 <style lang="stylus" scoped>
-.SiteIndex
+.ContentWrapper
   width: 100%
+  max-width: 64rem
 </style>
