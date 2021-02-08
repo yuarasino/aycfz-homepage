@@ -4,7 +4,13 @@ export default {
   srcDir: "src",
 
   head: {
-    title: "aycfz-homepage",
+    title: "AYCFZ/えーゆーちごふれずも",
+    titleTemplate: (pageTitle) => {
+      if (!pageTitle) {
+        return "AYCFZ/えーゆーちごふれずも"
+      }
+      return `${pageTitle} | AYCFZ/えーゆーちごふれずも`
+    },
     htmlAttrs: {
       lang: "ja",
     },
