@@ -22,8 +22,9 @@ export default defineComponent({})
 <style lang="stylus" scoped>
 .SiteHeader
   display: flex
-  position: fixed
+  justify-content: center
   align-items: center
+  position: fixed
   top: 0
   left: 0
   width: 100%
@@ -38,7 +39,7 @@ export default defineComponent({})
   text-decoration: none
   font-family: $designFontFamily
   font-size: 2rem
-  font-weight: bold
+  font-weight: 700
   color: inherit
 
 .flex-spacer
@@ -50,6 +51,7 @@ export default defineComponent({})
 .ul
   list-style: none
   display: flex
+  justify-content: center
   align-items: center
   padding-left: 0
 
@@ -61,6 +63,7 @@ export default defineComponent({})
   padding: 0 .25em
   text-decoration: none
   font-family: $designFontFamily
-  font-weight: bold
+  font-size: 1rem
+  font-weight: 700
   color: inherit
 </style>
