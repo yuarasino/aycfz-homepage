@@ -4,7 +4,6 @@ export default {
   srcDir: "src",
 
   head: {
-    title: "AYCFZ/えーゆーちごふれずも",
     titleTemplate: (pageTitle) => {
       if (!pageTitle) {
         return "AYCFZ/えーゆーちごふれずも"

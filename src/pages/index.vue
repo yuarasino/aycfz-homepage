@@ -13,5 +13,6 @@ export default defineComponent({})
 
 <style lang="stylus">
 .SiteIndex
+  width: 100%
   min-height: 100vh
 </style>
