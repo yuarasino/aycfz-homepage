@@ -3,29 +3,20 @@ section.IndexNews#news
   div.title-wrapper
     h2 IndexNews
   ContentWrapper
-    ul.content-list
-      li.content-item(v-for="content in contents" :key="content.slug")
-        NuxtLink.content-link(:to="`/blog/news/${content.slug}`")
-          article.content
-            h3
-              span {{ formatDate(content.date) }}
-              span {{ content.title }}
-            div
-              img(:src="content.thumbnail")
+    ul.summary-list
+      li.summary-item(v-for="post in posts" :key="post.slug")
+        NuxtLink.summary-link(:to="`/news/${post.slug}`")
+          NewsSummary(:post="post")
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, computed } from "@nuxtjs/composition-api"
-import { IContentDocument } from "@nuxt/content/types/content"
-import { formatDate } from "@/assets/scripts/utils"
+import { defineComponent, PropType } from "@nuxtjs/composition-api"
+import { INewsPost } from "@/types/news"
 
 export default defineComponent({
   props: {
-    contents: { type: Array as PropType<IContentDocument[]>, required: true },
+    posts: { type: Array as PropType<INewsPost[]>, required: true },
   },
-  setup: () => {
-    return { formatDate }
-  }
 })
 </script>
 
