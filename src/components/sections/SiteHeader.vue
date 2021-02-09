@@ -9,7 +9,7 @@ header.SiteHeader(:class="isScrollOver ? 'scroll-over' : ''")
   nav.menu-wrapper
     ul.menu-list
       li.menu-item
-        NuxtLink.menu-link(to="/#top")
+        NuxtLink.menu-link(to="/")
           div.menu
             span.en TOP
       li.menu-item
@@ -31,13 +31,11 @@ export default defineComponent({
     const isScrollOver = ref(false)
 
     onMounted(() => {
-      window.addEventListener(
-        "scroll",
-        throttle(500, false, () => {
-          const y = Math.floor((document.body.clientWidth * 9) / 16)
-          isScrollOver.value = window.scrollY >= y
-        })
-      )
+      const f = throttle(500, false, () => {
+        const y = Math.floor((document.body.clientWidth * 9) / 16) / 2
+        isScrollOver.value = window.scrollY >= y
+      })
+      window.addEventListener("scroll", f)
     })
 
     return { isScrollOver }
@@ -72,7 +70,7 @@ export default defineComponent({
     font-family: $enFontFamily
 
   .jp
-    margin-left: .1875em
+    margin-left: .125em
     font-size: 1rem
 
 .flex-spacer

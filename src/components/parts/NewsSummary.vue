@@ -20,7 +20,7 @@ export default defineComponent({
   },
   setup: () => {
     return { formatDate }
-  }
+  },
 })
 </script>
 
