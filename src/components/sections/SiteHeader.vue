@@ -72,7 +72,6 @@ export default defineComponent({
 
   .jp
     margin-left: .1875em
-    font-family: $jpFontFamily
     font-size: 1rem
 
 .flex-spacer

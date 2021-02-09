@@ -1,7 +1,8 @@
 <template lang="pug">
 section.IndexTop#top
-  ImageWrapper(:aspectRaito="9/16")
-    img(src="/images/top.png" alt="AYCFZ/えーゆーちごふれずも")
+  div.hero-wrapper
+    ImageWrapper(:aspectRaito="9/16")
+      img.hero(src="/images/top.png" alt="AYCFZ/えーゆーちごふれずも")
 </template>
 
 <script lang="ts">

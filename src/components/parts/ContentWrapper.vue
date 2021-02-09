@@ -12,6 +12,6 @@ export default defineComponent({})
 <style lang="stylus" scoped>
 .ContentWrapper
   margin: 0 auto
-  width: 100%
-  max-width: 64rem
+  max-width: 62rem
+  padding: 0 1rem
 </style>

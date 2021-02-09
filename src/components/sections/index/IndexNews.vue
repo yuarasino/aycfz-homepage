@@ -2,11 +2,12 @@
 section.IndexNews#news
   div.title-wrapper
     h2 IndexNews
-  ContentWrapper
-    ul.summary-list
-      li.summary-item(v-for="post in posts" :key="post.slug")
-        NuxtLink.summary-link(:to="`/news/${post.slug}`")
-          NewsSummary(:post="post")
+  div.summary-wrapper
+    ContentWrapper
+      ul.summary-list
+        li.summary-item(v-for="post in posts" :key="post.slug")
+          NuxtLink.summary-link(:to="`/news/${post.slug}`")
+            NewsSummary.summary(:post="post")
 </template>
 
 <script lang="ts">
@@ -24,4 +25,7 @@ export default defineComponent({
 .IndexNews
   width: 100%
   min-height: 100vh
+
+.summary-item
+  margin-top: 2rem
 </style>
