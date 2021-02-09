@@ -31,14 +31,17 @@ export default defineComponent({
     const isScrollOver = ref(false)
 
     onMounted(() => {
-      window.addEventListener("scroll", throttle(500, false, () => {
-        const y = Math.floor(document.body.clientWidth * 9 / 16)
-        isScrollOver.value = window.scrollY >= y
-      }))
+      window.addEventListener(
+        "scroll",
+        throttle(500, false, () => {
+          const y = Math.floor((document.body.clientWidth * 9) / 16)
+          isScrollOver.value = window.scrollY >= y
+        })
+      )
     })
 
     return { isScrollOver }
-  }
+  },
 })
 </script>
 

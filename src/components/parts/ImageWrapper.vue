@@ -9,7 +9,7 @@ import { defineComponent } from "@nuxtjs/composition-api"
 export default defineComponent({
   props: {
     aspectRaito: { type: Number, required: true },
-  }
+  },
 })
 </script>
 

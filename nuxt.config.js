@@ -37,7 +37,7 @@ export default {
     "@nuxtjs/style-resources",
   ],
 
-  modules: [],
+  modules: ["@nuxt/content"],
 
   build: {},
 
@@ -53,6 +53,6 @@ export default {
   },
 
   styleResources: {
-    stylus: ["@/assets/styles/import.styl"]
-  }
+    stylus: ["@/assets/styles/import.styl"],
+  },
 }
