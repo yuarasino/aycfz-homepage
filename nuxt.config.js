@@ -23,7 +23,6 @@ export default {
 
   css: [
     "modern-css-reset/dist/reset.min.css",
-    "yakuhanjp/dist/css/yakuhanjp-noto.min.css",
     "@/assets/styles/global.styl",
   ],
 
