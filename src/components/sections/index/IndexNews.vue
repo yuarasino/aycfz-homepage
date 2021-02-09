@@ -8,24 +8,22 @@ section.IndexNews#news
         NuxtLink.content-link(:to="`/blog/news/${content.slug}`")
           article.content
             h3
-              span {{ formatDate(content.createdAt) }}
+              span {{ formatDate(content.date) }}
               span {{ content.title }}
+            div
+              img(:src="content.thumbnail")
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType, computed } from "@nuxtjs/composition-api"
 import { IContentDocument } from "@nuxt/content/types/content"
-import moment from "moment"
+import { formatDate } from "@/assets/scripts/utils"
 
 export default defineComponent({
   props: {
     contents: { type: Array as PropType<IContentDocument[]>, required: true },
   },
   setup: () => {
-    const formatDate = (date: Date) => {
-      return moment(date).format("YYYY.MM.DD")
-    }
-
     return { formatDate }
   }
 })

@@ -13,7 +13,7 @@ export default defineComponent({
     const { $content } = useContext()
     const newsContents = useAsync(() => {
       return $content("news")
-        .sortBy("createdAt", "desc")
+        .sortBy("date", "desc")
         .fetch()
     })
 
