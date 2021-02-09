@@ -30,8 +30,7 @@ export default defineComponent({
           const wh = window.innerHeight
           if (wh - top > 32) {
             el.classList.add("scroll-appear")
-          }
-          else {
+          } else {
             el.classList.remove("scroll-appear")
           }
         })
