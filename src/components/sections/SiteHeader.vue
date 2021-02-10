@@ -72,6 +72,9 @@ export default defineComponent({
   .jp
     margin-left: .125em
     font-size: 1rem
+    font-family: $jpFontFamily
+    font-weight: 400
+    transform: rotate(0.005deg)
 
 .flex-spacer
   flex: 1

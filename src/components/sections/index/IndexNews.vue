@@ -28,7 +28,7 @@ export default defineComponent({
         const f = throttle(500, false, () => {
           const top = el.getBoundingClientRect().top
           const wh = window.innerHeight
-          if (wh - top > 32) {
+          if (wh - top > 0) {
             el.classList.add("scroll-appear")
           } else {
             el.classList.remove("scroll-appear")
