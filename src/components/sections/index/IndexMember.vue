@@ -16,8 +16,13 @@ section.IndexMember#member
             :profile="profile"
             @click="onClick"
           )
-      Transition
-        MemberProfile.profile.scroll-effect(:profile="currentProfile")
+      div.profile-box
+        transition
+          MemberProfile.profile.scroll-effect(
+            :key="currentProfile.nameEN"
+            :profile="currentProfile"
+            :class="scrollAppear ? 'scroll-appear' : ''"
+          )
 </template>
 
 <script lang="ts">
@@ -48,13 +53,7 @@ export default defineComponent({
         const f = throttle(500, false, () => {
           const top = el.getBoundingClientRect().top
           const wh = window.innerHeight
-          if (wh - top > 0) {
-            el.classList.add("scroll-appear")
-            scrollAppear.value = true
-          } else {
-            el.classList.remove("scroll-appear")
-            scrollAppear.value = false
-          }
+          scrollAppear.value = wh - top > 0
         })
         f()
         window.addEventListener("scroll", f)
@@ -96,7 +95,14 @@ export default defineComponent({
   margin-top: 1rem
   width: 32%
 
+.profile-box
+  position: relative
+
 .profile
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 0
   margin-top: 4rem
 
 .scroll-effect
@@ -107,4 +113,16 @@ export default defineComponent({
 .scroll-appear
   opacity: 1
   transform: translateY(0)
+
+.v-enter-active,
+.v-leave-active
+  transition: 1s
+
+.v-enter,
+.v-leave-to
+  opacity: 0
+  transform: translateX(-4rem)
+
+.v-enter-active
+  z-index: 9
 </style>
