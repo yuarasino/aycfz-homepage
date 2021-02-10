@@ -2,12 +2,13 @@
 div.SiteIndex
   IndexTop
   IndexNews(:posts="newsPosts")
-  IndexMember
+  IndexMember(:profiles="memberProfiles")
 </template>
 
 <script lang="ts">
 import { defineComponent, useAsync, useContext } from "@nuxtjs/composition-api"
 import { INewsPost } from "@/assets/scripts/news"
+import { memberProfiles } from "@/assets/scripts/member"
 
 export default defineComponent({
   setup: () => {
@@ -19,7 +20,7 @@ export default defineComponent({
         .fetch()) as INewsPost[]
     })
 
-    return { newsPosts }
+    return { newsPosts, memberProfiles }
   },
 })
 </script>

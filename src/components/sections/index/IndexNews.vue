@@ -63,7 +63,6 @@ export default defineComponent({
     margin-left: .125em
     font-size: 2rem
 
-
 .summary-item
   margin-top: 4rem
 
