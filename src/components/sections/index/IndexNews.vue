@@ -14,7 +14,7 @@ section.IndexNews#news
 
 <script lang="ts">
 import { defineComponent, PropType, onMounted } from "@nuxtjs/composition-api"
-import { INewsPost } from "@/types/news"
+import { INewsPost } from "@/assets/scripts/news"
 import { throttle } from "throttle-debounce"
 
 export default defineComponent({

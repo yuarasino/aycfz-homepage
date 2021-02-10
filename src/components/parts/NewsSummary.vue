@@ -11,8 +11,8 @@ article.NewsSummary
 
 <script lang="ts">
 import { defineComponent, PropType } from "@nuxtjs/composition-api"
-import { INewsPost } from "@/types/news"
-import { formatDate } from "@/assets/scripts/utils"
+import { INewsPost } from "@/assets/scripts/news"
+import { formatDate } from "@/assets/scripts/common"
 
 export default defineComponent({
   props: {

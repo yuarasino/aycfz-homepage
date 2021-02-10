@@ -5,7 +5,7 @@ div.NewsPost
 
 <script lang="ts">
 import { defineComponent, useAsync, useContext } from "@nuxtjs/composition-api"
-import { INewsPost } from "@/types/news"
+import { INewsPost } from "@/assets/scripts/news"
 
 export default defineComponent({
   setup: () => {
