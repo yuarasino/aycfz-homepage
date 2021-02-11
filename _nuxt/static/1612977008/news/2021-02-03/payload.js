@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/news/2021-02-03", {data:[{}],fetch:[],mutations:void 0});
