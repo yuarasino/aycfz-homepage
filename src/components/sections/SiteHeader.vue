@@ -32,8 +32,7 @@ export default defineComponent({
 
     onMounted(() => {
       const f = throttle(500, false, () => {
-        const y = Math.floor((document.body.clientWidth * 9) / 16) / 2
-        isScrollOver.value = window.scrollY >= y
+        isScrollOver.value = window.scrollY > 64
       })
       window.addEventListener("scroll", f)
     })
@@ -55,7 +54,7 @@ export default defineComponent({
   transition: 1s
 
   &.scroll-over
-    background-color: #333
+    background-color: alpha(#000, .8)
     color: #fff
 
 .logo-wrapper
