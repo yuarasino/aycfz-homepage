@@ -2,8 +2,8 @@
 section.IndexTop#top
   div.hero-wrapper
     ImageWrapper.image-wrapper(:aspectRaito="9/16")
-      img.hero(src="/images/top.png" alt="AYCFZ/えーゆーちごふれずも")
-      img.back(src="/images/back.png" alt="")
+      WebpWrapper.hero(src="/images/top.webp" alt="AYCFZ/えーゆーちごふれずも")
+      WebpWrapper.back(src="/images/back.webp" alt="")
 </template>
 
 <script lang="ts">
