@@ -1,7 +1,7 @@
 const Header = (): JSX.Element => {
   return (
     <header>
-      <p>Header</p>
+      <p>AYCFZ</p>
     </header>
   )
 }
