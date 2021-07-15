@@ -20,7 +20,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
           />
         </Head>
-        <body>
+        <body className="min-h-screen font-body">
           <Main />
           <NextScript />
         </body>
