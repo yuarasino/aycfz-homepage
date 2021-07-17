@@ -19,6 +19,7 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
           />
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <body className="min-h-screen font-body">
           <Main />
